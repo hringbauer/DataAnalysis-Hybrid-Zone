@@ -14,7 +14,7 @@ from random import choice
 from collections import Counter
 from scipy.optimize import curve_fit
 from pyproj import Proj  # @UnresolvedImport
-from colorpins import extract_colored_kml
+#from colorpins import extract_colored_kml
 
 draw_parent = False  # Whether simulated data is shown in correlogram
 min_relatedness = 0.2  # Kinship threshold for PO detection
@@ -127,8 +127,8 @@ class FlaggedSNPs(object):
         
         print("Extracting Google Maps file")
         longs, lats = self.xy_to_gps(coords[:, 0], coords[:, 1])
-        extract_colored_kml(score[0, :], lats, longs, self.id, "pca.kml")
-        extract_colored_kml(score[1, :], lats, longs, self.id, "pca2.kml")  # Second PCA axis
+        #extract_colored_kml(score[0, :], lats, longs, self.id, "pca.kml")
+        #extract_colored_kml(score[1, :], lats, longs, self.id, "pca2.kml")  # Second PCA axis
         print("Extraction complete")
 
     def analyze_correlations(self, max_dist):
